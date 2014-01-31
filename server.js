@@ -17,7 +17,6 @@ var oauth = new OAuth(
 app.configure(function() {
     app.set('view engine', 'hbs');
     app.set('views', path.join(__dirname, 'views'));
-
     app.use(express.methodOverride());
     app.use(express.cookieParser());
     app.use(express.session({ secret: "wofwehfef2" }));
@@ -52,12 +51,11 @@ app.get('/auth/twitter/callback', function(req, res) {
     var oauth_data;
 
     if ( ! req.session.oauth) return res.redirect('/login');
- 
-    req.session.oauth.verifier = req.query.oauth_verifier;
 
-    oauth_data = req.session.oauth;
- 
-    oauth.getOAuthAccessToken(
+    req.session.oauth.verifier = req.query.oauth_verifier;
+
+    oauth_data = req.session.oauth;
+    oauth.getOAuthAccessToken(
         oauth_data.consumerkey,
         oauth_data.consumerSecret,
         oauth_data.verifier,
@@ -75,9 +73,7 @@ app.get('/auth/twitter/callback', function(req, res) {
                 res.send("Authentication Successful");
             }
         }
-    );
+    );
 });
 
 app.listen(4000);
-
-      
