@@ -6,6 +6,9 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.swp
+*.todo
+.DS_Store
 
 pids
 logs
@@ -13,3 +16,5 @@ results
 
 npm-debug.log
 node_modules
+
+config/secret.json

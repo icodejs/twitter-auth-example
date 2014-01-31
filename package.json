@@ -1,0 +1,29 @@
+{
+  "name": "twitter-auth-example",
+  "version": "0.0.1",
+  "description": "Example code for twitter auth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/icodejs/twitter-auth-example.git"
+  },
+  "keywords": [
+    "twitter",
+    "auth"
+  ],
+  "author": "Jay Esco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icodejs/twitter-auth-example/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.8",
+    "express-hbs": "~0.7.8",
+    "ntwitter": "~0.5.0",
+    "oauth": "~0.9.11"
+  }
+}
